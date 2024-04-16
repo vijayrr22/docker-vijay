@@ -38,4 +38,4 @@ jobs:
       with:
         push: true
         tags: vijayrr2208/docker-repo:v1
-        file: ./Dockerfile
+        file: ./dockerfile
