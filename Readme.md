@@ -112,4 +112,24 @@ what shoud i have before doing it
 step by step
 
 
+!pip install datasets
+from datasets import load_dataset
 
+# Load the dataset
+dataset = load_dataset("tomaarsen/setfit-absa-semeval-laptops")
+
+# Print dataset information
+print(dataset)
+import pandas as pd
+
+# Convert train split to a pandas DataFrame
+train_df = pd.DataFrame(dataset["train"])
+
+# Save train DataFrame to CSV
+train_df.to_csv("train_dataset.csv", index=False)
+
+# Convert test split to a pandas DataFrame
+test_df = pd.DataFrame(dataset["test"])
+
+# Save test DataFrame to CSV
+test_df.to_csv("test_dataset.csv", index=False)
